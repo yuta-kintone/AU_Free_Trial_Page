@@ -113,9 +113,9 @@ function setup($form) {
   //     },
   //   });
   // });
-  $domain.on("input", function () {
-    isValidSubdomain = false;
-  });
+  // $domain.on("input", function () {
+  //   isValidSubdomain = false;
+  // });
 
   var hubspotForm = document.getElementById("hubspotform");
   hubspotForm.addEventListener(
@@ -126,7 +126,7 @@ function setup($form) {
         e.preventDefault();
         e.stopPropagation();
       }
-      console.log("submit: Calling from AU_FREE_TRIAL_PAGE/trial_clara.js");
+      
     },
     true
   );
