@@ -96,7 +96,7 @@ function findPlane() {
 }
 
 function setup($form) {
-  console.log("Calling from AU_FREE_TRIAL_PAGE/trial_clara.js");
+  console.log("set up: Calling from AU_FREE_TRIAL_PAGE/trial_clara.js");
   var $submit = $form.find('input[type="submit"]');
   //$submit.prop("disabled", true);
 
@@ -122,9 +122,11 @@ function setup($form) {
     "submit",
     function (e) {
       if (!isValidSubdomain) {
+        
         e.preventDefault();
         e.stopPropagation();
       }
+      console.log("submit: Calling from AU_FREE_TRIAL_PAGE/trial_clara.js");
     },
     true
   );
