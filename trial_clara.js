@@ -96,6 +96,7 @@ function findPlane() {
 }
 
 function setup($form) {
+  console.log("Calling from AU_FREE_TRIAL_PAGE/trial_clara.js");
   var $submit = $form.find('input[type="submit"]');
   //$submit.prop("disabled", true);
 
