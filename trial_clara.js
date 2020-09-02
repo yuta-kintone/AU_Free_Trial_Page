@@ -25,12 +25,16 @@ function validateSubdomain(subdomain, callbacks) {
     contentType: "application/json; charset=utf-8",
   })
     .then(function (response) {
+      console.log("response: Calling from AU_FREE_TRIAL_PAGE/trial_clara.js");
+      console.log(response);
       if (!response) {
         return;
       }
       callbacks.onSuccess();
     })
     .catch(function (error) {
+      console.log("error: Calling from AU_FREE_TRIAL_PAGE/trial_clara.js");
+      console.log(error);
       if (error.status === 400 && error.responseJSON) {
         var response = error.responseJSON;
         var messages = response.errors.subdomain.messages;
